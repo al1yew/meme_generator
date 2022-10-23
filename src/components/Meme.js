@@ -10,6 +10,10 @@ export default function Meme() {
         bottomText: "",
         leftText: "",
         rightText: "",
+        topTextColor: false,
+        rightTextColor: false,
+        leftTextColor: false,
+        bottomTextColor: false,
         url: ""
     });
 
@@ -42,38 +46,59 @@ export default function Meme() {
                 <div className="row all">
                     <p className="text-center firstp">Get a random meme image and write your own text!</p>
                     <div className="memeform" >
-                        <input
-                            type="text"
-                            placeholder="Top text"
-                            className="col-lg-5-8 col-5-8"
-                            value={meme.topText}
-                            onChange={handleChange}
-                            name="topText"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Bottom text"
-                            className="col-lg-5-8 col-5-8"
-                            value={meme.bottomText}
-                            onChange={handleChange}
-                            name="bottomText"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Left text"
-                            className="col-lg-5-8 col-5-8"
-                            value={meme.leftText}
-                            onChange={handleChange}
-                            name="leftText"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Right text"
-                            className="col-lg-5-8 col-5-8"
-                            value={meme.rightText}
-                            onChange={handleChange}
-                            name="rightText"
-                        />
+
+                        <div className="col-lg-5-8 col-12">
+                            <input
+                                type="text"
+                                placeholder="Top text"
+                                className="col-lg-10 col-10"
+                                value={meme.topText}
+                                onChange={handleChange}
+                                name="topText"
+                            />
+                            <input type="checkbox" name="topTextColor" value={meme.topTextColor} className="inputcheckbox" onClick={handleChange} id="topTextColor" />
+                            <label htmlFor="topTextColor">black</label>
+                        </div>
+
+                        <div className="col-lg-5-8 col-12">
+                            <input
+                                type="text"
+                                placeholder="Bottom text"
+                                className="col-lg-10 col-10"
+                                value={meme.bottomText}
+                                onChange={handleChange}
+                                name="bottomText"
+                            />
+                            <input type="checkbox" name="bottomTextColor" value={meme.bottomTextColor} className="inputcheckbox" onClick={handleChange} id="bottomTextColor" />
+                            <label htmlFor="bottomTextColor">black</label>
+                        </div>
+
+                        <div className="col-lg-5-8 col-12">
+                            <input
+                                type="text"
+                                placeholder="Left text"
+                                className="col-lg-10 col-10"
+                                value={meme.leftText}
+                                onChange={handleChange}
+                                name="leftText"
+                            />
+                            <input type="checkbox" name="leftTextColor" value={meme.leftTextColor} className="inputcheckbox" onClick={handleChange} id="leftTextColor" />
+                            <label htmlFor="leftTextColor">black</label>
+                        </div>
+
+                        <div className="col-lg-5-8 col-12">
+                            <input
+                                type="text"
+                                placeholder="Right text"
+                                className="col-lg-10 col-10"
+                                value={meme.rightText}
+                                onChange={handleChange}
+                                name="rightText"
+                            />
+                            <input type="checkbox" name="rightTextColor" value={meme.rightTextColor} className="inputcheckbox" onClick={handleChange} id="rightTextColor" />
+                            <label htmlFor="rightTextColor">black</label>
+                        </div>
+
                         <button
                             type="button"
                             className="col-12 col-lg-12"
@@ -86,10 +111,10 @@ export default function Meme() {
                     <div className="memecontainer">
                         <div className="imgcont">
                             <img src={meme.url} />
-                            <span className="toptext">{meme.topText}</span>
-                            <span className="lefttext">{meme.leftText}</span>
-                            <span className="righttext">{meme.rightText}</span>
-                            <span className="bottomtext">{meme.bottomText}</span>
+                            <span className="toptext" >{meme.topText}</span>
+                            <span className="lefttext" >{meme.leftText}</span>
+                            <span className="righttext" >{meme.rightText}</span>
+                            <span className="bottomtext" >{meme.bottomText}</span>
                         </div>
                     </div>
                 </div>

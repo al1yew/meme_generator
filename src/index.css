@@ -355,13 +355,15 @@ p {
   font-size: 20px;
   color: #672280;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 20px 0;
 }
 
 .all .memeform {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 30px 0;
+  margin: 0;
+  padding: 0;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -394,6 +396,8 @@ p {
 }
 
 .all .memecontainer {
+  padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,11 +407,12 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 30px 0;
 }
 
 .all .memecontainer .imgcont {
   position: relative;
-  width: 50%;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -428,7 +433,7 @@ p {
   font-size: 40px;
   color: white;
   position: absolute;
-  width: 50%;
+  width: 70%;
   text-align: center;
   text-shadow: 2px 2px 10px rgba(128, 128, 128, 0.5);
 }
@@ -442,14 +447,18 @@ p {
 
 .all .memecontainer .imgcont .lefttext {
   top: 50%;
-  left: 5%;
+  text-align: start;
+  width: 30% !important;
+  left: 3%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
 .all .memecontainer .imgcont .righttext {
   top: 50%;
-  right: 5%;
+  width: 30% !important;
+  right: 3%;
+  text-align: end;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -461,13 +470,60 @@ p {
           transform: translateX(-50%);
 }
 
+.footer {
+  font-size: 15px;
+  margin: 50px 0;
+}
+
+.footer a {
+  color: #672280;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding-left: 3px;
+}
+
 @media (max-width: 576px) {
+  .header {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 70px;
+    padding: 10px 15px;
+    background-color: #672280;
+    color: white;
+  }
+  .header span {
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  .header img {
+    height: 100%;
+  }
+  .firstp {
+    font-size: 14px;
+    color: #672280;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  .all {
+    padding: 0 12px;
+  }
   .all .memecontainer .imgcont {
-    width: 50%;
+    width: 100%;
   }
   .all .memecontainer .imgcont span {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     color: white;
   }
 }

@@ -300,13 +300,15 @@ p {
     font-size: 20px;
     color: #672280;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 20px 0;
 }
 
 .all {
 
     .memeform {
         display: flex;
-        margin: 30px 0;
+        margin: 0;
+        padding: 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -335,13 +337,16 @@ p {
     }
 
     .memecontainer {
+        padding: 0;
+        margin: 0;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 30px 0;
 
         .imgcont {
             position: relative;
-            width: 50%;
+            width: 70%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -355,7 +360,7 @@ p {
                 font-size: 40px;
                 color: white;
                 position: absolute;
-                width: 50%;
+                width: 70%;
                 text-align: center;
                 text-shadow: 2px 2px 10px rgba(128, 128, 128, 0.5);
             }
@@ -368,13 +373,17 @@ p {
 
             .lefttext {
                 top: 50%;
-                left: 5%;
+                text-align: start;
+                width: 30% !important;
+                left: 3%;
                 transform: translateY(-50%);
             }
 
             .righttext {
                 top: 50%;
-                right: 5%;
+                width: 30% !important;
+                right: 3%;
+                text-align: end;
                 transform: translateY(-50%);
             }
 
@@ -387,16 +396,58 @@ p {
     }
 }
 
+.footer {
+    font-size: 15px;
+    margin: 50px 0;
+
+    a {
+        color: #672280;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        width: max-content;
+        padding-left: 3px;
+    }
+}
+
 @media(max-width: 576px) {
+
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        padding: 10px 15px;
+        background-color: #672280;
+        color: white;
+
+        span {
+            font-size: 20px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .firstp {
+        font-size: 14px;
+        color: #672280;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
     .all {
+        padding: 0 12px;
 
         .memecontainer {
             .imgcont {
-                width: 50%;
+                width: 100%;
 
                 span {
                     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                    font-size: 18px;
+                    font-size: 15px;
                     color: white;
                 }
             }
