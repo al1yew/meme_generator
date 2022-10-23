@@ -357,16 +357,14 @@ p {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.memeform {
+.all .memeform {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 30px 0;
-  padding: 0 50px;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -374,7 +372,7 @@ p {
       flex-wrap: wrap;
 }
 
-.memeform input {
+.all .memeform input {
   border: 1px solid grey;
   outline: none;
   border-radius: 3px;
@@ -384,7 +382,7 @@ p {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.memeform button {
+.all .memeform button {
   background-color: #672280;
   padding: 10px 0;
   outline: none;
@@ -395,7 +393,7 @@ p {
   cursor: pointer;
 }
 
-.memecontainer {
+.all .memecontainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -407,7 +405,7 @@ p {
           align-items: center;
 }
 
-.memecontainer .imgcont {
+.all .memecontainer .imgcont {
   position: relative;
   width: 50%;
   display: -webkit-box;
@@ -421,11 +419,11 @@ p {
           align-items: center;
 }
 
-.memecontainer .imgcont img {
+.all .memecontainer .imgcont img {
   max-width: 100%;
 }
 
-.memecontainer .imgcont span {
+.all .memecontainer .imgcont span {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 40px;
   color: white;
@@ -435,31 +433,42 @@ p {
   text-shadow: 2px 2px 10px rgba(128, 128, 128, 0.5);
 }
 
-.memecontainer .imgcont .toptext {
+.all .memecontainer .imgcont .toptext {
   top: 5%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 
-.memecontainer .imgcont .lefttext {
+.all .memecontainer .imgcont .lefttext {
   top: 50%;
   left: 5%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
-.memecontainer .imgcont .righttext {
+.all .memecontainer .imgcont .righttext {
   top: 50%;
   right: 5%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
-.memecontainer .imgcont .bottomtext {
+.all .memecontainer .imgcont .bottomtext {
   bottom: 5%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@media (max-width: 576px) {
+  .all .memecontainer .imgcont {
+    width: 50%;
+  }
+  .all .memecontainer .imgcont span {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+    color: white;
+  }
 }
 /*# sourceMappingURL=index.css.map */
