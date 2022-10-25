@@ -19,16 +19,16 @@ export default function Meme() {
 
     useEffect(() => {
         axios.get("https://api.imgflip.com/get_memes")
-            .then(res => setMemes(res.data));
+            .then(res => setMemes(res.data.data.memes));
     }, []);
 
     let randomNum;
 
     function handleClick() {
-        randomNum = Math.floor(Math.random() * memes?.data?.memes?.length);
+        randomNum = Math.floor(Math.random() * memes?.length);
 
         setMeme((prevValue) => {
-            return ({ ...prevValue, url: memes?.data?.memes[randomNum]?.url });
+            return ({ ...prevValue, url: memes[randomNum]?.url });
         });
     }
 
@@ -36,7 +36,10 @@ export default function Meme() {
         const { name, value } = e.target;
 
         setMeme(prevValue => {
-            return ({ ...prevValue, [name]: value });
+            return ({
+                ...prevValue,
+                [name]: value
+            });
         });
     }
 
