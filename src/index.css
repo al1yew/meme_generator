@@ -374,14 +374,43 @@ p {
       flex-wrap: wrap;
 }
 
-.all .memeform input {
+.all .memeform div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.all .memeform div input {
   border: 1px solid grey;
   outline: none;
   border-radius: 3px;
   padding: 5px;
   font-size: 18px;
-  margin-bottom: 30px;
   color: rgba(0, 0, 0, 0.7);
+}
+
+.all .memeform div label {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 18px;
+  margin-left: 8px;
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 1px 2px;
+  border-radius: 4px;
+}
+
+.all .memeform div .closebtn {
+  margin-left: 7px;
+  cursor: pointer;
+}
+
+.all .memeform div .closebtn svg {
+  width: 120%;
+  height: 120%;
 }
 
 .all .memeform button {

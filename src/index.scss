@@ -314,14 +314,39 @@ p {
         align-items: center;
         flex-wrap: wrap;
 
-        input {
-            border: 1px solid grey;
-            outline: none;
-            border-radius: 3px;
-            padding: 5px;
-            font-size: 18px;
+        div {
+            display: flex;
+            align-items: center;
             margin-bottom: 30px;
-            color: rgba(0, 0, 0, 0.7);
+
+            input {
+                border: 1px solid grey;
+                outline: none;
+                border-radius: 3px;
+                padding: 5px;
+                font-size: 18px;
+                color: rgba(0, 0, 0, 0.7);
+            }
+
+            label {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 18px;
+                margin-left: 8px;
+                cursor: pointer;
+                border: 1px solid black;
+                padding: 1px 2px;
+                border-radius: 4px;
+            }
+
+            .closebtn {
+                margin-left: 7px;
+                cursor: pointer;
+
+                svg {
+                    width: 120%;
+                    height: 120%;
+                }
+            }
         }
 
         button {

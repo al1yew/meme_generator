@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { UilTimesCircle } from '@iconscout/react-unicons'
 
 export default function Meme() {
 
@@ -10,10 +11,10 @@ export default function Meme() {
         bottomText: "",
         leftText: "",
         rightText: "",
-        topTextColor: false,
-        rightTextColor: false,
-        leftTextColor: false,
-        bottomTextColor: false,
+        topIsBlack: false,
+        rightIsBlack: false,
+        leftIsBlack: false,
+        bottomIsBlack: false,
         url: ""
     });
 
@@ -33,13 +34,13 @@ export default function Meme() {
     }
 
     function handleChange(e) {
-        const { name, value } = e.target;
+        const { name, value, type, checked } = e.target
 
         setMeme(prevValue => {
-            return ({
+            return {
                 ...prevValue,
-                [name]: value
-            });
+                [name]: type === "checkbox" ? checked : value
+            }
         });
     }
 
@@ -59,8 +60,9 @@ export default function Meme() {
                                 onChange={handleChange}
                                 name="topText"
                             />
-                            <input type="checkbox" name="topTextColor" value={meme.topTextColor} className="inputcheckbox" onClick={handleChange} id="topTextColor" />
-                            <label htmlFor="topTextColor">black</label>
+                            <input type="checkbox" hidden name="topIsBlack" value={meme.topIsBlack} className="inputcheckbox" onClick={handleChange} id="topIsBlack" />
+                            <label htmlFor="topIsBlack">{meme.topIsBlack ? "White" : "Black"}</label>
+                            {/* {meme.topText && <span className="closebtn" onClick={handleDelete("topText")}><UilTimesCircle /></span>} */}
                         </div>
 
                         <div className="col-lg-5-8 col-12">
@@ -72,8 +74,9 @@ export default function Meme() {
                                 onChange={handleChange}
                                 name="bottomText"
                             />
-                            <input type="checkbox" name="bottomTextColor" value={meme.bottomTextColor} className="inputcheckbox" onClick={handleChange} id="bottomTextColor" />
-                            <label htmlFor="bottomTextColor">black</label>
+                            <input type="checkbox" hidden name="bottomIsBlack" value={meme.bottomIsBlack} className="inputcheckbox" onClick={handleChange} id="bottomIsBlack" />
+                            <label htmlFor="bottomIsBlack">{meme.bottomIsBlack ? "White" : "Black"}</label>
+                            {/* {meme.bottomText && <span className="closebtn"><UilTimesCircle /></span>} */}
                         </div>
 
                         <div className="col-lg-5-8 col-12">
@@ -85,8 +88,9 @@ export default function Meme() {
                                 onChange={handleChange}
                                 name="leftText"
                             />
-                            <input type="checkbox" name="leftTextColor" value={meme.leftTextColor} className="inputcheckbox" onClick={handleChange} id="leftTextColor" />
-                            <label htmlFor="leftTextColor">black</label>
+                            <input type="checkbox" hidden name="leftIsBlack" value={meme.leftIsBlack} className="inputcheckbox" onClick={handleChange} id="leftIsBlack" />
+                            <label htmlFor="leftIsBlack">{meme.leftIsBlack ? "White" : "Black"}</label>
+                            {/* {meme.leftText && <span className="closebtn"><UilTimesCircle /></span>} */}
                         </div>
 
                         <div className="col-lg-5-8 col-12">
@@ -98,8 +102,9 @@ export default function Meme() {
                                 onChange={handleChange}
                                 name="rightText"
                             />
-                            <input type="checkbox" name="rightTextColor" value={meme.rightTextColor} className="inputcheckbox" onClick={handleChange} id="rightTextColor" />
-                            <label htmlFor="rightTextColor">black</label>
+                            <input type="checkbox" hidden name="rightIsBlack" value={meme.rightIsBlack} className="inputcheckbox" onClick={handleChange} id="rightIsBlack" />
+                            <label htmlFor="rightIsBlack">{meme.rightIsBlack ? "White" : "Black"}</label>
+                            {/* {meme.rightText && <span className="closebtn"><UilTimesCircle /></span>} */}
                         </div>
 
                         <button
@@ -114,10 +119,10 @@ export default function Meme() {
                     <div className="memecontainer">
                         <div className="imgcont">
                             <img src={meme.url} />
-                            <span className="toptext" >{meme.topText}</span>
-                            <span className="lefttext" >{meme.leftText}</span>
-                            <span className="righttext" >{meme.rightText}</span>
-                            <span className="bottomtext" >{meme.bottomText}</span>
+                            <span className="toptext" style={{ color: meme.topIsBlack && 'black' }}>{meme.topText}</span>
+                            <span className="lefttext" style={{ color: meme.leftIsBlack && 'black' }}>{meme.leftText}</span>
+                            <span className="righttext" style={{ color: meme.rightIsBlack && 'black' }}>{meme.rightText}</span>
+                            <span className="bottomtext" style={{ color: meme.bottomIsBlack && 'black' }}>{meme.bottomText}</span>
                         </div>
                     </div>
                 </div>

@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.f665e26b.css",
-    "main.js": "/static/js/main.fb09efe6.js",
+    "main.css": "/static/css/main.44f9569f.css",
+    "main.js": "/static/js/main.ea309e32.js",
     "static/media/Trollface_non-free.png": "/static/media/Trollface_non-free.b677baa78e080334fc08.png",
     "index.html": "/index.html",
-    "main.f665e26b.css.map": "/static/css/main.f665e26b.css.map",
-    "main.fb09efe6.js.map": "/static/js/main.fb09efe6.js.map"
+    "main.44f9569f.css.map": "/static/css/main.44f9569f.css.map",
+    "main.ea309e32.js.map": "/static/js/main.ea309e32.js.map"
   },
   "entrypoints": [
-    "static/css/main.f665e26b.css",
-    "static/js/main.fb09efe6.js"
+    "static/css/main.44f9569f.css",
+    "static/js/main.ea309e32.js"
   ]
 }
